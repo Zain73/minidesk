@@ -1,0 +1,218 @@
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  #hero {
+    .frontiers {
+      h1 {
+        max-width: 230px;
+      }
+    }
+
+    .hero-svg-container {
+      display: initial;
+    }
+  }
+
+  #services {
+
+    .architecture {
+
+        .bg {
+            margin: 0 auto;
+        }
+
+        .photograph {
+
+            img {
+                left:25%;
+            }
+        }
+
+        h2, p {
+            margin-left:25%;
+        }
+    }
+
+    .furnish .photograph img {
+        margin: 0 auto;
+    }
+  }
+
+  #work {
+
+    h2 {
+      margin: 0 auto 30px auto;
+    }
+
+    .image-slider .images-container p {
+      top:80%;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    border-bottom: 1.5px solid white;
+    padding: 18px 0 16px 0 !important;
+
+    .hamb-icon {
+      display: none;
+    }
+
+    nav {
+      margin-right: clamp(20px, 6%, 6%);
+      display: inline-block;
+      position: relative;
+      width: initial !important;
+      border: none !important;
+      top: initial !important;
+      background-color: transparent;
+
+      ul {
+        flex-direction: row !important;
+        padding: 0 !important;
+
+        li {
+          width: initial;
+          margin-left: 55px;
+          transition: font-weight 200ms linear;
+
+          a {
+            line-height: 2.2em !important;
+          }
+        }
+
+        li:hover,
+        li:focus {
+          background-color: initial;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+
+  #hero {
+    background: initial;
+    background-image: url("../SVG's/heroBackground.svg");
+    height: calc(723 / 1366 * 100vw);
+    max-height: 768px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .frontiers {
+      //min-width:310px;
+      width: 40%;
+      height: 100%;
+
+      h1 {
+        width: 6.59375em;
+        margin: 35% 0 4% 20%;
+      }
+
+      button {
+        margin: 8% 10% 10% 20%;
+      }
+
+      .scroll-icon {
+        margin: 0 0 0 40%;
+      }
+    }
+
+    .hero-svg-container {
+      display: none;
+    }
+
+    .photos {
+      display: inline-block;
+    }
+  }
+
+  #services {
+    flex-direction: row;
+    margin-bottom: 200px;
+
+    .architecture {
+      width: 45.6%;
+        margin-bottom:0;
+    }
+
+    .furnish {
+      width: 41.87%;
+    }
+  }
+
+  #work {
+
+    h2 {
+      margin:0 auto 30px auto;
+    }
+
+    .image-slider {
+
+      .comment {
+        width: 300px;
+        left:20%;
+        top:70%;
+        right:initial;
+      }
+
+      .images-container {
+        .sample {
+          width: 35%;
+          min-width:300px;
+          margin-left:5%;
+        }
+
+        .sample[highlight="no"] {
+          display: block;
+          order:2;
+        }
+  
+        .sample[highlight="yes"] {
+          display: block;
+          order:1;
+        }
+      }
+
+      .svg-buttons-container {
+
+        svg {
+          width:5.34%;
+        }
+
+        .backward {
+          margin-left:7%;
+        }
+
+      }
+    }
+  }
+
+  #contact {
+    background:initial;
+    height:calc(507/1366 * 100vw);
+    background-image: url("../SVG's/contactBackground.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+
+    .heading {
+      margin: 16% 0 15px 8%;
+    }
+
+    input {
+      margin: 0px 0 10px 8%;
+    }
+
+    .number {
+      margin-bottom:6%;
+    }
+
+    .message {
+      position: absolute;
+      bottom:5%;
+      right:10%;
+      width:30%;
+      height:50%;
+    }
+  }
+}

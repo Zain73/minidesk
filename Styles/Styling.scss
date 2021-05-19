@@ -1,0 +1,49 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    color:#1C373D;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+p, li, a, button {
+    font-family: 'Roboto Slab';
+    font-size: clamp(1rem, calc(1rem + ((1vw - 0.48rem) * 0.8929)), 1.125rem);
+    //letter-spacing:0.04em;
+}
+
+#page-wrapper {
+    max-width:1440px;
+    margin:0 auto;
+    position: relative;
+}
+
+li {
+    list-style:none;
+}
+
+button, input {
+    border:none;
+    outline:none;
+}
+
+a {
+    text-decoration:none;
+}
+
+.heading {
+    font-size: clamp(1.875rem, calc(1.875rem + ((1vw - 0.48rem) * 5.3571)), 2.625rem);
+    font-family: 'DM Serif Text', serif;
+    font-weight:normal !important;
+    width:fit-content;
+}
+
+@import "header";
+@import "hero";
+@import "services";
+@import "work";
+@import "contact";
+@import "media queries";

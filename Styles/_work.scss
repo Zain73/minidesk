@@ -1,0 +1,58 @@
+#work {
+  margin-bottom: 150px;
+
+  h2 {
+    margin: 0 30px 30px 30px;
+  }
+
+  .image-slider {
+    background-color: #1C373D;
+    position: relative;
+
+    .comment {
+      position: absolute;
+      top:77%;
+      right:5%;
+      background-color: #fff;
+      box-shadow:0px 0px 40px 0px #000000;
+      width:60%;
+      padding:1em 1.2em;
+
+      span {
+          font-family: 'Kalam';
+          color:black !important;
+      }
+  }
+
+    .images-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+
+        .sample {
+        width: 95%;
+      }
+
+      .sample[highlight="no"] {
+        display: none;
+      }
+
+      .sample[highlight="yes"] {
+        display: block;
+      }
+    }
+
+    .svg-buttons-container {
+        display:flex;
+        align-items: center;
+
+      svg {
+        width: 15%;
+        max-width:70px;
+        cursor: pointer;
+      }
+
+    }
+  }
+}

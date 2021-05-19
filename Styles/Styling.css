@@ -1,0 +1,667 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #1C373D;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p, li, a, button {
+  font-family: 'Roboto Slab';
+  font-size: clamp(1rem, calc(1rem + ((1vw - 0.48rem) * 0.8929)), 1.125rem);
+}
+
+#page-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+button, input {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.heading {
+  font-size: clamp(1.875rem, calc(1.875rem + ((1vw - 0.48rem) * 5.3571)), 2.625rem);
+  font-family: 'DM Serif Text', serif;
+  font-weight: normal !important;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+header {
+  width: 100%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 10px;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background-color: transparent;
+  border-bottom: 1.5px solid white;
+}
+
+header .logo-anchor {
+  margin-left: clamp(20px, 6%, 6%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .logo-anchor .logo {
+  width: clamp(130px, calc(8.125rem + (170 - 130) * ((100vw - 768px) / (992 - 768))), 170px) !important;
+}
+
+header .hamb-icon {
+  cursor: pointer;
+  margin: 4px clamp(20px, 6%, 6%) 6px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 18px;
+  width: 22px;
+}
+
+header .hamb-icon div {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+  position: relative;
+}
+
+header .hamb-icon div:nth-of-type(2) {
+  right: 0;
+}
+
+header .cross-hamb-icon div:nth-of-type(2) {
+  opacity: 0;
+  right: 100%;
+  width: 0%;
+}
+
+header .cross-hamb-icon div:nth-of-type(1) {
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: rotate(39deg);
+          transform: rotate(39deg);
+  width: 27px !important;
+}
+
+header .cross-hamb-icon div:nth-of-type(3) {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(-39deg) translate(-1px, 1px);
+          transform: rotate(-39deg) translate(-1px, 1px);
+  width: 27.5px !important;
+}
+
+header nav {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  border-bottom: 1.5px solid white;
+  background-color: #1C373D;
+  width: 100%;
+  display: none;
+  margin-top: 5px;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 1.5rem 0 1.5rem 0;
+}
+
+header nav ul li {
+  width: 100%;
+  text-align: center;
+  display: block;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+header nav ul li > a {
+  display: block;
+  line-height: 2.6em !important;
+  color: white;
+}
+
+header nav ul li:hover, header nav ul li:focus {
+  background-color: #3A8C6F;
+}
+
+#hero {
+  width: 100%;
+  background: linear-gradient(44.27deg, #24423B -25.35%, #1C373D 59.61%);
+  margin-bottom: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hero .frontiers {
+  display: inline-block;
+  position: relative;
+}
+
+#hero .frontiers h1 {
+  font-family: 'DM Serif Text', serif;
+  font-weight: normal !important;
+  font-size: clamp(2.125rem, calc(2.125rem + ((1vw - 0.48rem) * 6.0185)), 3.75rem);
+  color: white;
+  margin: 110px 33px 0 40px;
+  line-height: 1.2em;
+  display: inline-block;
+}
+
+#hero .frontiers button {
+  background-color: #3A8C6F;
+  font-size: clamp(14px, calc(0.875rem + ((1vw - 7.68px) * 0.8929)), 16px);
+  color: white;
+  margin: 40px 0 40px 40px;
+  padding: 0.8em 1.1em;
+  border-radius: 1.071428em;
+  display: block;
+  cursor: pointer;
+}
+
+#hero .frontiers .scroll-icon {
+  margin-left: 110px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+#hero .hero-svg-container {
+  width: calc(100% - 303px);
+  display: none;
+}
+
+#hero .hero-svg-container .hero-svg {
+  width: clamp(110px, 35%, 130px);
+  margin: 70px auto 0 auto;
+  display: block;
+}
+
+#hero .photos {
+  display: none;
+  width: 60%;
+}
+
+#hero .photos img {
+  width: 40%;
+  -webkit-box-shadow: 0px 0px 40px 0px #000000;
+          box-shadow: 0px 0px 40px 0px #000000;
+  position: relative;
+}
+
+#hero .photos .photo-one {
+  -webkit-transform: translate(20%, 5%) rotate(-10deg);
+          transform: translate(20%, 5%) rotate(-10deg);
+}
+
+#hero .photos .photo-two {
+  -webkit-transform: translate(20%, 5%);
+          transform: translate(20%, 5%);
+  z-index: 2;
+}
+
+#services {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 150px;
+}
+
+#services .architecture {
+  width: 100%;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+#services .architecture .bg {
+  width: 85.23%;
+  max-height: 315px;
+  display: block;
+}
+
+#services .architecture .photograph {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#services .architecture .photograph img {
+  position: relative;
+  top: 0%;
+  left: 18%;
+  width: clamp(100px, 60%, 320px);
+  z-index: 2;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+
+#services .architecture h2 {
+  margin: 20px 0 0 10%;
+}
+
+#services .architecture p {
+  max-width: 18em;
+  margin: 10px 0 0 10%;
+}
+
+#services .furnish {
+  width: 100%;
+  background-color: #1c373d;
+}
+
+#services .furnish * {
+  color: white;
+}
+
+#services .furnish .photograph img {
+  width: clamp(100px, 63.5%, 360px);
+  margin-left: 36.5%;
+  margin-bottom: 20px;
+  display: block;
+}
+
+#services .furnish h2 {
+  margin: 30px auto 10px 7.5%;
+}
+
+#services .furnish p {
+  margin: 0 auto 30px 7.5%;
+  width: 63%;
+  min-width: 280px;
+}
+
+#work {
+  margin-bottom: 150px;
+}
+
+#work h2 {
+  margin: 0 30px 30px 30px;
+}
+
+#work .image-slider {
+  background-color: #1C373D;
+  position: relative;
+}
+
+#work .image-slider .comment {
+  position: absolute;
+  top: 77%;
+  right: 5%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 40px 0px #000000;
+          box-shadow: 0px 0px 40px 0px #000000;
+  width: 60%;
+  padding: 1em 1.2em;
+}
+
+#work .image-slider .comment span {
+  font-family: 'Kalam';
+  color: black !important;
+}
+
+#work .image-slider .images-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+#work .image-slider .images-container .sample {
+  width: 95%;
+}
+
+#work .image-slider .images-container .sample[highlight="no"] {
+  display: none;
+}
+
+#work .image-slider .images-container .sample[highlight="yes"] {
+  display: block;
+}
+
+#work .image-slider .svg-buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#work .image-slider .svg-buttons-container svg {
+  width: 15%;
+  max-width: 70px;
+  cursor: pointer;
+}
+
+#contact {
+  width: 100%;
+  background: radial-gradient(346.92% 92.7% at 57.58% 81.85%, #0D3B41 0%, #1C313D 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+#contact .heading {
+  color: white;
+  margin: 25px 0 15px 30px;
+  display: inline-block;
+}
+
+#contact input {
+  border-radius: 0.5em;
+  background: transparent;
+  margin: 15px 0 30px 30px;
+  position: relative;
+  color: white;
+  padding: 1em 0 1em 0.7em;
+  border: 1px solid white;
+}
+
+#contact input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1rem;
+  display: block;
+  margin-left: 10px;
+}
+
+#contact input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1rem;
+  display: block;
+  margin-left: 10px;
+}
+
+#contact input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1rem;
+  display: block;
+  margin-left: 10px;
+}
+
+#contact input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1rem;
+  display: block;
+  margin-left: 10px;
+}
+
+#contact .name, #contact .number {
+  width: 145px;
+  height: 35px;
+}
+
+#contact .message {
+  width: 85%;
+  height: 100px;
+}
+
+#contact .message::-webkit-input-placeholder {
+  position: absolute;
+  top: 8%;
+  left: 0;
+}
+
+#contact .message:-ms-input-placeholder {
+  position: absolute;
+  top: 8%;
+  left: 0;
+}
+
+#contact .message::-ms-input-placeholder {
+  position: absolute;
+  top: 8%;
+  left: 0;
+}
+
+#contact .message::placeholder {
+  position: absolute;
+  top: 8%;
+  left: 0;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  #hero .frontiers h1 {
+    max-width: 230px;
+  }
+  #hero .hero-svg-container {
+    display: initial;
+  }
+  #services .architecture .bg {
+    margin: 0 auto;
+  }
+  #services .architecture .photograph img {
+    left: 25%;
+  }
+  #services .architecture h2, #services .architecture p {
+    margin-left: 25%;
+  }
+  #services .furnish .photograph img {
+    margin: 0 auto;
+  }
+  #work h2 {
+    margin: 0 auto 30px auto;
+  }
+  #work .image-slider .images-container p {
+    top: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    border-bottom: 1.5px solid white;
+    padding: 18px 0 16px 0 !important;
+  }
+  header .hamb-icon {
+    display: none;
+  }
+  header nav {
+    margin-right: clamp(20px, 6%, 6%);
+    display: inline-block;
+    position: relative;
+    width: initial !important;
+    border: none !important;
+    top: initial !important;
+    background-color: transparent;
+  }
+  header nav ul {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    padding: 0 !important;
+  }
+  header nav ul li {
+    width: initial;
+    margin-left: 55px;
+    -webkit-transition: font-weight 200ms linear;
+    transition: font-weight 200ms linear;
+  }
+  header nav ul li a {
+    line-height: 2.2em !important;
+  }
+  header nav ul li:hover,
+  header nav ul li:focus {
+    background-color: initial;
+    font-weight: 800;
+  }
+  #hero {
+    background: initial;
+    background-image: url("../SVG's/heroBackground.svg");
+    height: calc(723 / 1366 * 100vw);
+    max-height: 768px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #hero .frontiers {
+    width: 40%;
+    height: 100%;
+  }
+  #hero .frontiers h1 {
+    width: 6.59375em;
+    margin: 35% 0 4% 20%;
+  }
+  #hero .frontiers button {
+    margin: 8% 10% 10% 20%;
+  }
+  #hero .frontiers .scroll-icon {
+    margin: 0 0 0 40%;
+  }
+  #hero .hero-svg-container {
+    display: none;
+  }
+  #hero .photos {
+    display: inline-block;
+  }
+  #services {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 200px;
+  }
+  #services .architecture {
+    width: 45.6%;
+    margin-bottom: 0;
+  }
+  #services .furnish {
+    width: 41.87%;
+  }
+  #work h2 {
+    margin: 0 auto 30px auto;
+  }
+  #work .image-slider .comment {
+    width: 300px;
+    left: 20%;
+    top: 70%;
+    right: initial;
+  }
+  #work .image-slider .images-container .sample {
+    width: 35%;
+    min-width: 300px;
+    margin-left: 5%;
+  }
+  #work .image-slider .images-container .sample[highlight="no"] {
+    display: block;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #work .image-slider .images-container .sample[highlight="yes"] {
+    display: block;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #work .image-slider .svg-buttons-container svg {
+    width: 5.34%;
+  }
+  #work .image-slider .svg-buttons-container .backward {
+    margin-left: 7%;
+  }
+  #contact {
+    background: initial;
+    height: calc(507/1366 * 100vw);
+    background-image: url("../SVG's/contactBackground.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #contact .heading {
+    margin: 16% 0 15px 8%;
+  }
+  #contact input {
+    margin: 0px 0 10px 8%;
+  }
+  #contact .number {
+    margin-bottom: 6%;
+  }
+  #contact .message {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    width: 30%;
+    height: 50%;
+  }
+}
+/*# sourceMappingURL=Styling.css.map */

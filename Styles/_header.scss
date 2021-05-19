@@ -1,0 +1,105 @@
+header {
+    width:100%;
+    z-index:2;
+    display:flex;
+    align-items:center !important;
+    justify-content: space-between;
+    padding-top:18px;
+    padding-bottom: 10px;
+    position: absolute;
+    top:0px;
+    left:0;
+    background-color:transparent;
+    border-bottom:1.5px solid white;
+
+    .logo-anchor {
+        margin-left:clamp(20px, 6%, 6%);
+        display:flex;
+        flex-direction:column;
+
+        .logo {
+            //width:130px !important;
+            width: clamp(130px, calc(8.125rem + (170 - 130) * ((100vw - 768px) / (992 - 768))), 170px) !important;
+        }
+    }
+
+    .hamb-icon {
+        cursor:pointer;
+        margin: 4px clamp(20px, 6%, 6%) 6px 0;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-between;
+        height:18px;
+        width:22px;
+    
+        div {
+            width:100%;
+            height:2px;
+            background-color:#ffffff;
+            border-radius:5px;
+            transition: 0.4s linear;
+            position: relative;
+        }
+
+        div:nth-of-type(2) {
+            right:0;
+        }
+    }
+    
+    .cross-hamb-icon {
+
+        div:nth-of-type(2) {
+            opacity:0;
+            right:100%;
+            width:0%;      
+        }
+    
+        div:nth-of-type(1) {
+            transform-origin:bottom left;
+            transform: rotate(39deg);
+            width:27px !important;
+        }
+    
+        div:nth-of-type(3) {
+            transform-origin:top left;
+            transform: rotate(-39deg) translate(-1px, 1px);
+            width:27.5px !important;
+        }
+    }
+    nav {
+        position: absolute;
+        top:64px;
+        right:0;
+        border-bottom:1.5px solid white;
+        background-color:#1C373D;
+        width:100%;
+        display:none;
+        margin-top:5px;
+
+        ul {
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            width:100%;
+            padding:1.5rem 0 1.5rem 0;
+
+            li {
+                width:100%;
+                text-align: center;
+                display:block;
+                transition: background-color 150ms linear;
+            }
+
+            li > a {
+                display: block;
+                line-height:2.6em !important;
+                color:white;
+
+            }
+
+            li:hover, li:focus {
+                background-color:#3A8C6F;
+            }
+        }
+    }
+}

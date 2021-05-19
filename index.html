@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Minidesk</title>
+        <!-- <p style="transform: translate(0%);font-size:18px;background-color: gray; border-radius:50%; display:inline-block; text-align: center; width:20px;"> 1 </p> -->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Kalam&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400..800">
+        <link rel="stylesheet" href="Styles/Styling.css">
+    </head>
+    <body>
+        <div id="page-wrapper">
+            <header>
+                <a class="logo-anchor" href="#">
+                    <img src="SVG's/Logo.svg">
+                </a>
+                <div onclick="toggleNav()" class="hamb-icon">
+                   <div></div>
+                   <div></div>
+                   <div></div>
+                </div>   
+                <nav>
+                    <ul>
+                        <li id="1"><a href="#">Home</a></li>
+                        <li id="2"><a href="#services">Services</a></li>
+                        <li id="3"><a href="#work">Our Work</a></li>
+                        <li id="4"><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section id="hero">
+                    <div class="frontiers">
+                        <h1>We do modern minimalistic designing</h1>
+                        <button onclick="document.location='#contact'">Schedule a discussion</button>
+                        <svg onclick="document.location='#services'" class="scroll-icon" width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.790344 1.38696L15.9597 12.4192L31.1291 1.38696" stroke="white" stroke-width="2"/>
+                            <path d="M0.790344 12.4192L15.9597 22.5321L31.1291 12.4192" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="hero-svg-container">
+                        <img class="hero-svg" src="SVG's/heroVector.svg">                            
+                    </div>
+                    <div class="photos">
+                        <img class="photo-one" src="Images/hero1.jpg">
+                        <img class="photo-two" src="Images/hero2.jpg">                          
+                    </div>
+                </section>
+                <section id="services">
+                    <div class="architecture">
+                        <svg class="bg" viewBox="0 0 531 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="531" height="360" fill="#1C373D"/>
+                        </svg>                            
+                        <div class="photograph">
+                            <img src="Images/intArch.jpg">
+                            <!-- <li class="one">
+                                <span>1</span>
+                                <p>Design with Perfection</p>
+                            </li>
+                            <li class="two">
+                                <span>2</span>
+                                <p>100% client satisfaction</p>
+                            </li>
+                            <li class="three">
+                                <span>3</span>
+                                <p>Experienced Architect</p>
+                            </li> -->
+                        </div>
+                        <h2 class="heading">Interior Architecture</h2>
+                        <p id="special">Enchancing and visualing the model to adjust the room available in order to make a great architecture.</p>
+                    </div>
+                    <div class="furnish">
+                        <h2 class="heading">Furnish and Styling</h2>
+                        <p>Creatively improve the color scheme and placement of object and walls to have an eye-appealing design.</p>
+                        <div class="photograph">
+                            <img src="Images/furnish.jpg">
+                        </div>
+                    </div>
+                </section>
+                <section id="work">
+                    <h2 class="heading">See what our previous clients had to say!</h2>
+                    <div class="image-slider">
+                        <p class="comment">I am very satisfied with the value and <u>top-notch quality</u> they provide. <span>~ Ali Sohail</span></p>
+                        <div class="images-container">
+                            <img highlight="yes" class="sample" src="Images/sample1.jpg">
+                            <img highlight="no" class="sample" src="Images/sample2.jpg">
+                            <img highlight="no" class="sample" src="Images/sample3.jpg">
+                            <!-- highlight yes means that this image's comment will be displayed -->
+                        </div>
+                        <div class="svg-buttons-container">
+                            <svg onclick="goBackward()" class="backward" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="73" height="73" fill="white"/>
+                                <path d="M45.5 37.4737C40.9481 37.4737 41.2246 37.4737 27 37.4737M27 37.4737L35 44.5M27 37.4737L35 30" stroke="#1C373D" stroke-width="1.5"/>
+                            </svg>        
+                            <svg onclick="goForward()" class="forward" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="73" height="73" fill="#3A8C6F"/>
+                                <path d="M27 37.4737C31.5519 37.4737 31.2754 37.4737 45.5 37.4737M45.5 37.4737L37.5 44.5M45.5 37.4737L37.5 30" stroke="white" stroke-width="1.5"/>
+                            </svg>                                                
+                        </div>
+                    </div>
+                </section>
+                <section id="contact">
+                    <h2 class="heading">Contact Us</h2>
+                    <input class="name" placeholder="Your Name">
+                    <input class="number" placeholder="Your Cell No.">
+                    <input class="message" placeholder="Your Message">
+                </section>
+            </main>
+        </div>
+        <script src="JavaScript/app.js"></script>
+    </body> 
+</html>

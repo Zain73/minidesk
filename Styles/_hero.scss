@@ -1,0 +1,73 @@
+#hero {
+    width:100%;
+    // height: calc(703/1366 * 100vw);
+    background: linear-gradient(44.27deg, #24423B -25.35%, #1C373D 59.61%);
+    margin-bottom:150px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .frontiers {
+        display:inline-block;
+        position: relative;
+        
+        h1 {
+            font-family: 'DM Serif Text', serif;
+            font-weight:normal !important;
+            font-size: clamp(2.125rem, calc(2.125rem + ((1vw - 0.48rem) * 6.0185)), 3.75rem);
+            color:white;
+            margin: 110px 33px 0 40px;
+            line-height: 1.2em;
+            display: inline-block;
+        }
+
+        button {
+            background-color: #3A8C6F;
+            font-size: clamp(14px, calc(0.875rem + ((1vw - 7.68px) * 0.8929)), 16px);
+            color:white;
+            margin:40px 0 40px 40px;
+            padding: 0.8em 1.1em;
+            border-radius: 1.071428em;
+            display: block;
+            cursor: pointer;
+        }
+
+        .scroll-icon {
+            margin-left:110px;
+            margin-bottom:40px;
+            cursor: pointer;
+        }
+    }
+
+    .hero-svg-container {
+        width:calc(100% - 303px);
+        display:none;
+
+        .hero-svg {
+            width:clamp(110px, 35%, 130px);
+            margin: 70px auto 0 auto;
+            display: block;
+        }
+    }
+
+    .photos {
+        display: none;
+        width:60%;
+
+        img {
+            width:40%;
+            box-shadow:0px 0px 40px 0px #000000;
+            position: relative;
+        }
+
+        .photo-one {
+            transform: translate(20%, 5%) rotate(-10deg);
+        }
+
+        .photo-two {
+            transform: translate(20%, 5%);
+            z-index:2;
+        }
+    }
+    
+}
